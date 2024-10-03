@@ -144,7 +144,7 @@ function loadGame() {
   $("h1").click(function () {
     beginLevel(level);
     gameRestart = true;
-    alert('ok');
+    //alert('ok');
     //$(document).off("keypress");
     //$("h1").off("click");
   });
