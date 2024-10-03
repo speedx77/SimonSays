@@ -85,23 +85,31 @@ p {
 
 
 .red {
+    display: flex;
+    justify-content: center;
     background-color: red;
     color: red
 }
 
 
 .green {
+    display: flex;
+    justify-content: center;
     background-color: green;
     color: green
     
 }
 
 .yellow {
+    display: flex;
+    justify-content: center;
     background-color: yellow;
     color: yellow;
 }
 
 .blue {
+    display: flex;
+    justify-content: center;
     background-color: blue;
     color: blue;
 }
