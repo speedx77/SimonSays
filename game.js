@@ -2,6 +2,7 @@ var simonArray = [];
 var userSimonArray = [];
 var clickCounter = 0;
 var level = 1;
+var gameRestart = false;
 
 function onClick() {
   clickCounter += 1;
@@ -140,10 +141,10 @@ function beginLevel(levelNum) {
 }
 
 function loadGame() {
-  $(document).keypress(function () {
+  $("h1").click(function () {
     beginLevel(level);
-
-    $(document).off("keypress");
+    gameRestart = true;
+    //$(document).off("keypress");
   });
 }
 
@@ -156,17 +157,30 @@ function endGame() {
   loseSound.volume = 0.75;
   loseSound.play();
 
-  $(document).keypress(function () {
-    $("h1").html("Press Any Key to  Start");
+  $("h1").click(function () {
+    $("h1").html("Level 1");
     $("body").css("background-color", "#292929");
     level = 1;
     clickCounter = 0;
     userSimonArray = [];
     simonArray = [];
-    beginLevel(level);
+    //beginLevel(level);
 
-    $(document).off("keypress");
+    //$(document).off("keypress");
   });
 }
 
-loadGame();
+
+function codeAddress() {
+  alert('ok');
+}
+
+window.onload = loadGame();
+
+/*
+if (gameRestart == false) {
+  loadGame();
+}
+*/
+
+
