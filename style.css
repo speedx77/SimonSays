@@ -86,20 +86,24 @@ p {
 
 .red {
     background-color: red;
+    color: red
 }
 
 
 .green {
     background-color: green;
+    color: green
     
 }
 
 .yellow {
     background-color: yellow;
+    color: yellow;
 }
 
 .blue {
     background-color: blue;
+    color: blue;
 }
 
 .simon-click{
