@@ -144,12 +144,14 @@ function loadGame() {
   $("h1").click(function () {
     beginLevel(level);
     gameRestart = true;
+    alert('ok');
     //$(document).off("keypress");
+    //$("h1").off("click");
   });
 }
 
 function endGame() {
-  $("h1").html("Game Over, Press Any Key to Start Over!");
+  $("h1").html("Game Over, Press Here to Start Over!");
   $("body").css("background-color", "red");
   $(".simon").off("click");
 
@@ -170,17 +172,19 @@ function endGame() {
   });
 }
 
-
-function codeAddress() {
-  alert('ok');
-}
-
-window.onload = loadGame();
-
 /*
-if (gameRestart == false) {
-  loadGame();
+function codeAddress() {
+  
 }
 */
+
+//window.onload = loadGame();
+
+
+if (gameRestart == false) {
+  loadGame();
+  console.log("begin")
+}
+
 
 
